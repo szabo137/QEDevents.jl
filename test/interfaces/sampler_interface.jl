@@ -17,7 +17,7 @@ struct TestSetup{D} <: AbstractComputationSetup
 end
 
 function TestSetup(dim::Integer)
-    return TestSetup(product_distribution(Uniform.(-rand(dim), 1.0)))
+    return TestSetup(product_distribution(Uniform.(-rand(RNG,dim), 1.0)))
 end
 
 Base.size(stp::TestSetup, N::Integer) = size(stp.dist)[1]
