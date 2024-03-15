@@ -23,7 +23,7 @@ Abstract base type for general sampler.
     QEDevents._rand!(rng::AbstractRNG, ::AbstractSampler, x::AbstractVector{T}) where {T}
 
     ```
-    
+
     optional
 
     ```Julia
@@ -60,7 +60,7 @@ end
 Interface function, which returns the weight associated with the given sample according to the sampler.
 
 !!! note ""
-    
+
     This function must not do input validation. This is done by [`weight`](@ref), which calls `_weight` after input validation.
 
 """
@@ -82,7 +82,7 @@ Interface function, which returns whether the sampler is exactly representing th
 """
 function is_exact end
 
-"""   
+"""
 
     $(TYPEDSIGNATURES)
 
@@ -175,6 +175,6 @@ is_exact(::AbstractProposalSampler) = false
 
     train!(smplr::AbstractProposalSampler, train_params; loss=Nothing)
 
-Interface function to perfom the training of a proposal sampler. 
+Interface function to perfom the training of a proposal sampler.
 """
 function train! end

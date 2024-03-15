@@ -9,7 +9,7 @@
 
     UniformSampler(stp::QEDprocesses.AbstractComputationSetup, bounds::AbstractVector)
 
-# Example 
+# Example
 ```
 using QEDprocesses, QEDevents
 struct TestSetup <: AbstractComputationSetup end
@@ -42,7 +42,7 @@ function train!(::UniformSampler, config...)
     return nothing
 end
 
-# TODO: generalize this! -> write issue about this! 
+# TODO: generalize this! -> write issue about this!
 Base.eltype(::UniformSampler) = Float64
 
 Base.size(s::UniformSampler) = size(s.dist)
