@@ -19,7 +19,7 @@ jobs:
       - uses: julia-actions/setup-julia@v1
         with:
           version: '1.9'
-      - name: Add custom registry 
+      - name: Add custom registry
         run: |
           julia --project=docs/ -e 'import Pkg; Pkg.Registry.add(Pkg.RegistrySpec(url="https://github.com/QEDjl-project/registry.git"));'
           julia --project=docs/ -e 'import Pkg; Pkg.Registry.add(Pkg.RegistrySpec(url="https://github.com/JuliaRegistries/General"));'
